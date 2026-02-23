@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escuela Politécnica Manuel Belgrano</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="main-header">
+  <div class="logo">
+    <img src="img/logo.png" alt="Logo Escuela">
+    <span>Politécnica Manuel Belgrano</span>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="institucional.html">Institucional</a></li>
+      <li><a href="novedades.html">Novedades</a></li>
+      <li><a href="#programas">Especialidades</a></li>
+      <li><a href="#admision">Admisión</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- TICKER REDES -->
+<div class="social-ticker">
+  <div class="ticker-track">
+    <span>📸 Seguinos en Instagram y Facebook</span>
+    <span>🎥 Mirá nuestros proyectos en YouTube</span>
+    <span>📣 Novedades todos los días</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <p class="typewriter">Escuela técnica de la Ciudad de Buenos Aires</p>
+    <h1>Donde Nacen Las Buenas Ideas</h1>
+    <p>
+      Formando técnicos en Automotores, Electromecánica y Electrónica
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#admision" class="btn">Información de Inscripción</a>
+      <a href="#programas" class="btn secondary">Conocer Especialidades</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="bienvenida fade" id="institucional">
+  <div class="container bienvenida-grid">
+
+    <div class="bienvenida-texto">
+      <h2>Nuestra Escuela</h2>
+
+      <p>
+        La Escuela Politécnica Manuel Belgrano es una institución técnica pública
+        ubicada en el histórico barrio de Montserrat, a pocas cuadras de la Plaza de Mayo.
+      </p>
+
+      <p>
+        Brindamos formación técnica de calidad en Automotores, Electromecánica y Electrónica,
+        combinando educación teórica y práctica en talleres especializados.
+      </p>
+
+      <p>
+        Nuestro objetivo es formar técnicos capacitados, con pensamiento crítico,
+        habilidades tecnológicas y compromiso social.
+      </p>
+
+        <a href="institucional.html" class="btn btn-institucional">
+        Conocé sobre nuestra escuela
+        </a>
+
+    </div>
+
+    <div class="bienvenida-img">
+      <img src="img/fachada.jpg" alt="Fachada escuela">
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="programas" id="programas">
+<div class="container">
+    <h2>Programas Académicos</h2>
+    <p class="subtitle">
+        Tres especialidades técnicas diseñadas para formar profesionales capacitados
+    </p>
+
+    <div class="cards programas-cards">
+
+        <!-- AUTOMOTORES -->
+        <div class="program-card">
+            <div class="img-wrap">
+                <img src="img/automotores.jpg">
+                <div class="icon auto">🚗</div>
+            </div>
+            <div class="content">
+                <h3>Técnico en Automotores</h3>
+                <p>Formación integral en mecánica automotriz y mantenimiento vehicular.</p>
+                <button class="btn-info" onclick="abrirModal('automotores')">Más información</button>
+            </div>
+        </div>
+
+        <!-- ELECTROMECANICA -->
+        <div class="program-card">
+            <div class="img-wrap">
+                <img src="img/electromecanica.jpg">
+                <div class="icon electro">⚙️</div>
+            </div>
+            <div class="content">
+                <h3>Técnico en Electromecánica</h3>
+                <p>Sistemas eléctricos y mecánicos, automatización industrial.</p>
+                <button class="btn-info" onclick="abrirModal('electromecanica')">Más información</button>
+            </div>
+        </div>
+
+        <!-- ELECTRONICA -->
+        <div class="program-card">
+            <div class="img-wrap">
+                <img src="img/electronica.jpg">
+                <div class="icon digi">💡</div>
+            </div>
+            <div class="content">
+                <h3>Técnico Electrónico</h3>
+                <p>Circuitos electrónicos, programación y tecnologías digitales.</p>
+                <button class="btn-info" onclick="abrirModal('electronica')">Más información</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+<section class="admision" id="admision">
+  <h2 class="titulo-seccion">Proceso de Admisión</h2>
+  <p class="subtitulo">
+    Únete a nuestra comunidad educativa y comienza tu formación técnica profesional
+  </p>
+
+  <div class="pasos-admision">
+
+    <div class="paso">
+      <div class="icono">ℹ️</div>
+      <span class="numero">01</span>
+      <h3>Información</h3>
+      <p>Consulta los requisitos y fechas de inscripción para el ciclo lectivo.</p>
+    </div>
+
+    <div class="paso">
+      <div class="icono">📄</div>
+      <span class="numero">02</span>
+      <h3>Documentación</h3>
+      <p>DNI, certificado de estudios y partida de nacimiento.</p>
+    </div>
+
+    <div class="paso">
+      <div class="icono">✏️</div>
+      <span class="numero">03</span>
+      <h3>Inscripción</h3>
+      <p>Completa el proceso en las fechas establecidas.</p>
+    </div>
+
+    <div class="paso">
+      <div class="icono">🤝</div>
+      <span class="numero">04</span>
+      <h3>Bienvenida</h3>
+      <p>Participa en la jornada de integración institucional.</p>
+    </div>
+    
+    
+
+  </div>
+    <div class="admision-botones">
+        <a href="https://buenosaires.gob.ar/gcaba_historico/educacion/estudiantes/inscripcionescolar" class="btn-admision">Inscripciones</a>
+        <a href="https://mapa.buenosaires.gob.ar/comollego/?lat=-34.611856&lng=-58.373325&zl=15&modo=transporte&hasta=Bolivar+346" class="btn-admision outline">Cómo llegar</a>
+        
+    </div>
+    
+</section>
+
+<!-- ORGANIZACIÓN DE CURSADA -->
+<section class="cursada">
+  <h2>Organización de Cursada</h2>
+
+  <div class="cursada-grid">
+
+    <div class="cursada-card">
+      <div class="icon">🌞</div>
+      <h3>Turno Mañana</h3>
+      <p>1° año</p>
+      <span class="horario">🕒 8:00 – 12:20 hs</span>
+    </div>
+
+    <div class="cursada-card">
+      <div class="icon">🏙️</div>
+      <h3>Turno Tarde</h3>
+      <p>2° y 3° año</p>
+      <span class="horario">🕒 13:00 – 17:20 hs</span>
+    </div>
+
+    <div class="cursada-card">
+      <div class="icon">🌙</div>
+      <h3>Turno Vespertino</h3>
+      <p>4°, 5° y 6° año</p>
+      <span class="horario">🕒 17:45 – 21:35 / 22:10 hs</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="noticias fade" id="novedades">
+    <h2>Novedades</h2>
+
+    <div class="cards novedades-cards">
+
+    <!-- ExpoTecnica -->
+    <div class="novedad-card">
+        <img src="img/portada-expo.jpg" alt="ExpoTécnica">
+        <div class="novedad-content">
+            <h3>ExpoTécnica</h3>
+            <p>Proyectos tecnológicos realizados por nuestros estudiantes.</p>
+            <!--<a href="novedades.html#expotecnica" class="btn-info">Ver más</a>-->
+        </div>
+    </div>
+
+    <!-- Feria -->
+    <div class="novedad-card">
+        <img src="img/portada-feria.jpg" alt="Feria de Ciencias">
+        <div class="novedad-content">
+            <h3>Feria de Ciencias</h3>
+            <p>Innovación, investigación y creatividad estudiantil.</p>
+            <!--<a href="novedades.html#feria" class="btn-info">Ver más</a>-->
+        </div>
+    </div>
+
+    <!-- Desafio Eco -->
+    <div class="novedad-card">
+        <img src="img/portada-eco.jpg" alt="Desafío Eco">
+        <div class="novedad-content">
+            <h3>Desafío Eco</h3>
+            <p>Competencias de autos eléctricos sustentables.</p>
+            <!--<a href="novedades.html#eco" class="btn-info">Ver más</a>-->
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- BOTÓN NUEVO -->
+    <div style="text-align:center; margin-top:30px;">
+        <a href="novedades.html" class="btn btn-novedades">
+            Ver todas las novedades
+        </a>
+    </div>
+</section>
+
+
+<section class="galeria fade">
+    <h2>Galería</h2>
+    <div class="gallery-grid">
+        <img src="img/galeria1.jpg" onclick="openModal(this)">
+        <img src="img/galeria2.jpg" onclick="openModal(this)">
+        <img src="img/galeria3.jpg" onclick="openModal(this)">
+        
+        <img src="img/galeria5.jpg" onclick="openModal(this)">
+        <img src="img/galeria6.jpg" onclick="openModal(this)">
+        <img src="img/galeria7.jpg" onclick="openModal(this)">
+        <img src="img/galeria8.jpg" onclick="openModal(this)">
+        <img src="img/galeria9.jpg" onclick="openModal(this)">
+        <img src="img/galeria10.jpg" onclick="openModal(this)">
+        <img src="img/galeria11.jpg" onclick="openModal(this)">
+        <img src="img/galeria12.jpg" onclick="openModal(this)">
+        <img src="img/galeria13.jpg" onclick="openModal(this)">
+        <img src="img/galeria14.jpg" onclick="openModal(this)">
+        <img src="img/galeria15.jpg" onclick="openModal(this)">
+        <img src="img/galeria16.jpg" onclick="openModal(this)">
+        <img src="img/galeria17.jpeg" onclick="openModal(this)">
+        <img src="img/galeria18.jpeg" onclick="openModal(this)">
+        <img src="img/galeria19.jpeg" onclick="openModal(this)">
+        <img src="img/galeria20.jpg" onclick="openModal(this)">
+    </div>
+</section>
+
+<div class="modal" id="imageModal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<section class="contacto fade" id="contacto">
+    <h2>Contacto</h2>
+
+    <div class="contact-grid">
+        <div>
+            <p><strong>Dirección:</strong><br>
+            Bolívar 346, Montserrat<br>
+            Buenos Aires, Argentina<br>
+            (3 cuadras de Plaza de Mayo)</p>
+
+            <p><strong>Teléfono:</strong><br>011 4331-7187</p>
+            <p><strong>Email:</strong><br>det_manuelbelgrano_de4@bue.edu.ar</p>
+
+            <div class="redes">
+                <h3>Seguinos en redes</h3>
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/politecnica_manuel_belgrano_ok/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/people/politecnica_manuel_belgrano_ok/100086086102180/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/channel/UC4mlXX_uVlG7o73prnUFXqw" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button class="btn">Enviar Mensaje</button>
+        </form>
+    </div>
+
+    <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Bolivar%20346%20Buenos%20Aires&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <img src="img/logo.png" alt="Logo Escuela" class="footer-logo">
+            <h3>Politécnica Manuel Belgrano</h3>
+            <p>Formando técnicos profesionales con excelencia desde el corazón de Buenos Aires.</p>
+        </div>
+
+        <div>
+            <h4>Ubicación</h4>
+            <p>Bolívar 346, Montserrat<br>
+            Buenos Aires, Argentina<br></p>
+        </div>
+
+        <div>
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#admision">Admisión</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Escuela Politécnica Manuel Belgrano
+    </div>
+</footer>
+
+<div class="chat-button" id="chatButton">💬</div>
+
+<div class="chatbot" id="chatbot">
+    <div class="chat-header">Asistente</div>
+    <div class="chat-body" id="chatBody"></div>
+    <input type="text" id="chatInput" placeholder="Escribí tu consulta...">
+    <div class="chat-redes">
+    📱 Seguinos:
+    <a href="https://www.instagram.com/politecnica_manuel_belgrano_ok/" target="_blank">Instagram</a> ·
+    <a href="https://www.facebook.com/people/politecnica_manuel_belgrano_ok/100086086102180/" target="_blank">Facebook</a> ·
+    <a href="https://www.youtube.com/channel/UC4mlXX_uVlG7o73prnUFXqw" target="_blank">Youtube</a>
+</div>
+
+</div>
+<!-- MODAL ESPECIALIDADES -->
+<div id="modal-especialidad" class="modal-overlay">
+  <div class="modal-card">
+    <span class="cerrar" onclick="cerrarModal()">✕</span>
+
+    <div class="modal-header">
+      <img id="modal-img" src="">
+      <div class="modal-titulo">
+        <span class="badge">Especialidad Técnica</span>
+        <h2 id="modal-titulo"></h2>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <p id="modal-descripcion"></p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h4>Duración</h4>
+          <p id="modal-duracion"></p>
+        </div>
+        <div class="info-box">
+          <h4>Horarios</h4>
+          <p id="modal-horarios"></p>
+        </div>
+      </div>
+
+      <h3>Competencias</h3>
+      <ul id="modal-competencias"></ul>
+
+      <h3>Salida laboral</h3>
+      <div id="modal-salidas" class="chips"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
