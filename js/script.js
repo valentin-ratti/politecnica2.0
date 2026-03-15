@@ -298,5 +298,28 @@ function toggleSocials() {
   popup.classList.toggle("show");
   popup.style.display = popup.classList.contains("show") ? "flex" : "none";
 }
-/* institucional*/
+/* formulario de contacto */
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+let nombre = document.querySelector("[name='nombre']").value.trim();
+let email = document.querySelector("[name='email']").value.trim();
+let mensaje = document.querySelector("[name='mensaje']").value.trim();
+
+if(nombre.length < 3){
+alert("El nombre es demasiado corto");
+e.preventDefault();
+return;
+}
+
+if(mensaje.length < 10){
+alert("El mensaje debe tener al menos 10 caracteres");
+e.preventDefault();
+return;
+}
+
+});
+
+/* efecto sandwich cierre*/
+
+
 

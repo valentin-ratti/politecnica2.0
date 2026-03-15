@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Escuela Politécnica Manuel Belgrano en Ciudad de Buenos Aires. Formación técnica en Automotores, Electromecánica y Electrónica.">
+<meta name="robots" content="index, follow">
+<meta name="google-site-verification" content="google-site-verification: google1da1adb241c64b76.html">
+
 <title>Escuela Politécnica Manuel Belgrano</title>
+<link rel="shortcut icon" href="./img/logo.png" />
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -276,26 +281,28 @@
 <section class="galeria fade">
     <h2>Galería</h2>
     <div class="gallery-grid">
-        <img src="img/galeria1.jpg" onclick="openModal(this)">
-        <img src="img/galeria2.jpg" onclick="openModal(this)">
-        <img src="img/galeria3.jpg" onclick="openModal(this)">
-        
-        <img src="img/galeria5.jpg" onclick="openModal(this)">
-        <img src="img/galeria6.jpg" onclick="openModal(this)">
-        <img src="img/galeria7.jpg" onclick="openModal(this)">
-        <img src="img/galeria8.jpg" onclick="openModal(this)">
-        <img src="img/galeria9.jpg" onclick="openModal(this)">
-        <img src="img/galeria10.jpg" onclick="openModal(this)">
-        <img src="img/galeria11.jpg" onclick="openModal(this)">
-        <img src="img/galeria12.jpg" onclick="openModal(this)">
-        <img src="img/galeria13.jpg" onclick="openModal(this)">
-        <img src="img/galeria14.jpg" onclick="openModal(this)">
-        <img src="img/galeria15.jpg" onclick="openModal(this)">
-        <img src="img/galeria16.jpg" onclick="openModal(this)">
-        <img src="img/galeria17.jpeg" onclick="openModal(this)">
-        <img src="img/galeria18.jpeg" onclick="openModal(this)">
-        <img src="img/galeria19.jpeg" onclick="openModal(this)">
-        <img src="img/galeria20.jpg" onclick="openModal(this)">
+        <div class="gallery-grid">
+
+        <img src="img/galeria1_resultado.webp" loading="lazy" decoding="async" width="400" height="300" onclick="openModal(this)" alt="Galería">
+        <img src="img/galeria2_resultado.webp" loading="lazy" decoding="async" width="400" height="300" onclick="openModal(this)" alt="Galería">
+        <img src="img/galeria3_resultado.webp" loading="lazy" decoding="async" width="400" height="300" onclick="openModal(this)" alt="Galería">
+        <img src="img/galeria5_resultado.webp" loading="lazy" decoding="async" width="400" height="300" onclick="openModal(this)" alt="Galería">
+        <img src="img/galeria6_resultado.webp" loading="lazy" decoding="async" width="400" height="300" onclick="openModal(this)" alt="Galería">
+        <img src="img/galeria7_resultado.webp" loading="lazy" decoding="async" width="400" height="300" onclick="openModal(this)" alt="Galería">
+
+        <img src="img/galeria8_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria9_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria10_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria11_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria12_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria13_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria14_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria15_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria16_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria17_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria18_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria19_resultado.webp" onclick="openModal(this)">
+        <img src="img/galeria20_resultado.webp" onclick="openModal(this)">
     </div>
 </section>
 
@@ -329,12 +336,59 @@
 
         </div>
 
-        <form>
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Mensaje" required></textarea>
-            <button class="btn">Enviar Mensaje</button>
+        <form id="contactForm" action="enviar.php" method="POST">
+
+          <input type="text" name="nombre" placeholder="Nombre" required>
+
+          <input type="email" name="email" placeholder="Email" required>
+
+          <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+
+          <!-- Honeypot anti bots -->
+          <input type="text" name="website" style="display:none">
+          
+          <input type="hidden" id="form_time" name="form_time">
+
+          <!-- Google reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="6LcBEoMsAAAAAE1u0UzjAhv8H8GE35R5uAutlu9r"></div>
+
+          <button class="btn">Enviar Mensaje</button>
+
         </form>
+          <script>
+
+            document.addEventListener("DOMContentLoaded", function() {
+
+            document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
+
+            });
+
+          </script>
+
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+
+          document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById("form_time").value = Math.floor(Date.now() / 1000);
+          });
+
+          document.querySelector("form").addEventListener("submit", function(){
+
+          let boton = document.getElementById("btnEnviar");
+
+          boton.innerText = "Enviando...";
+          boton.disabled = true;
+          });
+
+          </script>
+        <script>
+          const params = new URLSearchParams(window.location.search);
+
+          if(params.get("mensaje") === "enviado"){
+            alert("Mensaje enviado correctamente.");
+          }
+        </script>
+
     </div>
 
     <div class="map">
@@ -358,12 +412,14 @@
 
         <div>
             <h4>Enlaces Rápidos</h4>
-            <ul>
+              <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#programas">Programas</a></li>
+                <li><a href="#institucional">Institucional</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#programas">Especialidades</a></li>
                 <li><a href="#admision">Admisión</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-            </ul>
+              </ul>
         </div>
     </div>
 
