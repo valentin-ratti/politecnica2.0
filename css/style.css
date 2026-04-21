@@ -279,28 +279,7 @@ footer {
     font-size: 22px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-.hero {
-  position: relative; /* necesario para posicionar el logo */
-}
 
-.hero-overlay-logo {
-  position: absolute;
-  top: 00px;
-  left: 00px;
-  z-index: 10;
-}
-
-.hero-overlay-logo img {
-  height: 250px; /* probá 120, 140, 160 */
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
-}
-
-@media (max-width: 768px) {
-  .hero-overlay-logo img {
-    height: 120px;
-  }
-}
 
 @media(max-width: 900px){
     .contact-grid {
@@ -1663,5 +1642,49 @@ iframe {
 .logro-card p{
   font-size: 15px;
   line-height: 1.5;
+}
+
+/* ================= LOGO SECUNDARIA APRNDE ================= */
+/* DESKTOP - Esquina superior izquierda */
+/* ================= LOGO SECUNDARIA APRNDE ================= */
+.hero-overlay-logo {
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  z-index: 10;
+  width: 300px; /* Tu tamaño desktop perfecto */
+}
+
+.hero-overlay-logo img {
+  width: 100%;  /* 🔥 CAMBIO: 100% en lugar de 200% */
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+/* TABLET - Mantiene posición pero más pequeño */
+@media (max-width: 1024px) {
+  .hero-overlay-logo {
+    width: 160px;
+    top: 110px;
+  }
+}
+
+/* MÓVIL - Más pequeño, misma posición izquierda */
+@media (max-width: 768px) {
+  .hero-overlay-logo {
+    width: 220px;
+    top: 160px;
+    left: 00px; /* Pequeño margen izquierdo */
+  }
+}
+
+/* MÓVIL PEQUEÑO - Aún más compacto */
+@media (max-width: 480px) {
+  .hero-overlay-logo {
+    width: 150px;
+    top: 200px;
+    left: 8px;
+  }
 }
 
